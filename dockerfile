@@ -6,6 +6,8 @@ COPY . /home/app
 
 WORKDIR /home/app/frontend
 
+RUN npm install
+
 RUN npm run build
 
 WORKDIR /
