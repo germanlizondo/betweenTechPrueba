@@ -12,7 +12,7 @@ Prueba técnica para between Tech en Nodejs, Mongodb y React
 
 ### Acceder a la UI
 
-hppt://localhost:3000
+http://localhost:3000
 
 ### Recibir datos por Postman
 
