@@ -5,6 +5,7 @@ async function getAllWeatherData(queryParams) {
   try {
 
     if (queryParams.city) {
+      
       const allData = await WeatherRepository.filterByLocation(queryParams);
       return allData;
 
@@ -31,7 +32,7 @@ async function saveWeather(requestBody) {
     );
     return weatherSaved;
   } catch (err) {
-    throw new HttpError(404, err.message);
+    throw new HttpError(400, err.message);
   }
 }
 
@@ -40,7 +41,7 @@ async function deleteWeather(id) {
     const allData = await WeatherRepository.deleteWeather(id);
     return allData;
   } catch (err) {
-    throw new HttpError(404, err.message);
+    throw new HttpError(400, err.message);
   }
 }
 
