@@ -9,10 +9,10 @@ async function getAllWeatherData(objectFiltred) {
   }
 }
 
-async function filterByLocation(city) {
+async function filterByLocation(params) {
   try {
-   
-    const allData = await Weather.find({ "location.city": new RegExp('^'+city, 'i')});
+  
+    const allData = await Weather.find({ "location.city": new RegExp("^"+params.city, 'i')});
     return allData;
   } catch (err) {
     throw err;
