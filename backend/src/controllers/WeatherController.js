@@ -29,7 +29,9 @@ async function saveWeather(req, res) {
 async function deleteWeather(req, res) {
   try {
     await weatherService.deleteWeather(req.params.id);
-      
+      res.status(200).send({
+        "message": "Id: " + req.params.id +" deleted"
+      })
   } catch (err) {
     res.status(err.status).send({
       message: err.message,
