@@ -3,8 +3,15 @@ const WeatherRepository = require("../repositories/weatherRepository");
 const HttpError = require("../exceptions/HttpError");
 async function getAllWeatherData(queryParams) {
   try {
-    const allData = await WeatherRepository.getAllWeatherData(queryParams);
-    return allData;
+
+    if (queryParams.city) {
+      const allData = await WeatherRepository.filterByLocation(queryParams);
+      return allData;
+
+    } else {
+      const allData = await WeatherRepository.getAllWeatherData(queryParams);
+      return allData;
+    }
   } catch (err) {
     throw new HttpError(500, err.message);
   }
