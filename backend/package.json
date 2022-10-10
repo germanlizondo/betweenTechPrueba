@@ -1,0 +1,17 @@
+{
+  "name": "betweentechweather",
+  "version": "1.0.0",
+  "description": "Prueba Técnica Between Tech",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "German Lizondo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.5",
+    "path": "^0.12.7"
+  }
+}

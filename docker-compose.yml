@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    networks:
+      - germanlizondo-network 
+  mongodb:
+    image: mongo:6.0.2
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=between
+      - MONGO_INITDB_ROOT_PASSWORD=123456
+    networks:
+      - germanlizondo-network 
+
+networks:
+  germanlizondo-network:
+    driver: bridge
