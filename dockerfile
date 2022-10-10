@@ -12,7 +12,7 @@ RUN npm run build
 
 WORKDIR /
 
-RUN cp -R /home/app/frontend/build /home/app/backend/src/public
+RUN cp -R /home/app/frontend/build/* /home/app/backend/src/public
 
 WORKDIR /home/app/backend
 

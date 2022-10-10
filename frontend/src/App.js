@@ -14,7 +14,7 @@ function App() {
       setCityToFind("")
       url = "/api/all-data";
     } else {
-      url = "/api/all-data?location.city=" + cityToFind;
+      url = "/api/all-data?city=" + cityToFind;
     }
 
     fetch(url)
