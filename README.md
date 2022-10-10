@@ -29,7 +29,7 @@ curl --location --request POST 'localhost:3000/api/add' \
 --data-raw '{
     "date": "19/10/1997",
     "location": {
-        "city": "malloraca",
+        "city": "barcelona",
         "country": "spain"
     },
     "hourly_temperature": [
